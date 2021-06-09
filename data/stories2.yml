@@ -1,0 +1,470 @@
+version: "2.0"
+
+stories:
+- story: good intent scenario
+  steps:
+  - intent: good
+  - action: utter_conversational_chat
+
+- story: fine
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: fine
+  - action: fine_reason_form
+  - active_loop: fine_reason_form
+  - active_loop: null
+  - action: action_fine_reason
+  - intent: affirm
+  - action: whats_going_on_form
+  - active_loop: whats_going_on_form
+  - active_loop: null
+  - action: action_whats_going_on
+  - action: feel_form
+  - active_loop: feel_form
+  - active_loop: null
+  - action: action_feel
+  - intent: affirm
+  - action: different_form
+  - active_loop: different_form
+  - active_loop: null
+  - action: action_different
+  - action: going_to_do_form
+  - active_loop: going_to_do_form
+  - active_loop: null
+  - action: action_going_to_do
+  - intent: bye
+  - action: utter_bye
+
+
+- story: fine1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: fine
+  - action: fine_reason_form
+  - active_loop: fine_reason_form
+  - active_loop: null
+  - action: action_fine_reason
+  - intent: affirm
+  - action: whats_going_on_form
+  - active_loop: whats_going_on_form
+  - active_loop: null
+  - action: action_whats_going_on
+  - action: feel_form
+  - active_loop: feel_form
+  - active_loop: null
+  - action: action_feel
+  - intent: deny
+  - action: what_happened_form
+  - active_loop: what_happened_form
+  - active_loop: null
+  - action: action_what_happened
+  - action: to_do_now_form
+  - active_loop: to_do_now_form
+  - active_loop: null
+  - action: action_to_do_now
+  - action: best_option_form
+  - active_loop: best_option_form
+  - active_loop: null
+  - action: action_best_option
+  - intent: bye
+  - action: utter_bye
+
+
+
+- story: fine/1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: fine
+  - action: fine_reason_form
+  - active_loop: fine_reason_form
+  - active_loop: null
+  - action: action_fine_reason
+  - intent: deny
+  - action: utter_talk_something_else
+  - action: utter_conversational_chat
+  - intent: bye
+  - action: utter_bye
+
+
+
+- story: not_great
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: not_great
+  - action: fine_reason_2_form
+  - active_loop: fine_reason_2_form
+  - active_loop: null
+  - action: action_fine_reason_2
+  - intent: affirm
+  - action: whats_going_on_form
+  - active_loop: whats_going_on_form
+  - active_loop: null
+  - action: action_whats_going_on
+  - action: feel_form
+  - active_loop: feel_form
+  - active_loop: null
+  - action: action_feel
+  - intent: affirm
+  - action: different_form
+  - active_loop: different_form
+  - active_loop: null
+  - action: action_different
+  - action: going_to_do_form
+  - active_loop: going_to_do_form
+  - active_loop: null
+  - action: action_going_to_do
+  - intent: bye
+  - action: utter_bye
+
+
+- story: not_great1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: not_great
+  - action: fine_reason_2_form
+  - active_loop: fine_reason_2_form
+  - active_loop: null
+  - action: action_fine_reason_2
+  - intent: affirm
+  - action: whats_going_on_form
+  - active_loop: whats_going_on_form
+  - active_loop: null
+  - action: action_whats_going_on
+  - action: feel_form
+  - active_loop: feel_form
+  - active_loop: null
+  - action: action_feel
+  - intent: deny
+  - action: what_happened_form
+  - active_loop: what_happened_form
+  - active_loop: null
+  - action: action_what_happened
+  - action: to_do_now_form
+  - active_loop: to_do_now_form
+  - active_loop: null
+  - action: action_to_do_now
+  - action: best_option_form
+  - active_loop: best_option_form
+  - active_loop: null
+  - action: action_best_option
+  - intent: bye
+  - action: utter_bye
+
+
+
+- story: not_great/1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: fine
+  - action: fine_reason_2_form
+  - active_loop: fine_reason_2_form
+  - active_loop: null
+  - action: action_fine_reason_2
+  - intent: deny
+  - action: utter_talk_something_else
+  - action: utter_conversational_chat
+  - intent: bye
+  - action: utter_bye
+
+
+
+- story: reallysad1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: really_sad
+  - action: utter_really_sad_why
+  - intent: don't_wanna_talk
+  - action: utter_talk_with_someone
+  - intent: affirm
+  - action: they_tell_you_form
+  - active_loop: they_tell_you_form
+  - active_loop: null
+  - action: action_they_tell_you
+  - action: feel_about_that_form
+  - active_loop: feel_about_that_form
+  - active_loop: null
+  - action: action_feel_about_that
+  - action: tell_story_form
+  - active_loop: tell_story_form
+  - active_loop: null
+  - action: action_tell_story
+  - or:
+    - intent: affirm
+    - intent: deny
+  - action: utter_whats_next
+  - or:
+    - intent: not_sure
+    - intent: i_am
+  - action: best_option_form
+  - active_loop: best_option_form
+  - active_loop: null
+  - action: action_best_option
+  - intent: bye
+  - action: utter_bye
+
+
+- story: reallysad1/1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: really_sad
+  - action: utter_really_sad_why
+  - intent: don't_wanna_talk
+  - action: utter_talk_with_someone
+  - intent: deny
+  - action: utter_why_not
+  - intent: don't_wanna_talk
+  - action: utter_sadness_temporary
+  - action: utter_conversational_chat
+
+
+
+- story: reallysad1/2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: really_sad
+  - action: utter_really_sad_why
+  - intent: don't_wanna_talk
+  - action: utter_talk_with_someone
+  - intent: deny
+  - action: utter_why_not
+  - intent: emoticon
+  - action: utter_talk_to_me
+  - intent: affirm
+  - action: whats_going_on_form
+  - active_loop: whats_going_on_form
+  - active_loop: null
+  - action: action_whats_going_on
+  - action: feel_form
+  - active_loop: feel_form
+  - active_loop: null
+  - action: action_feel
+  - intent: affirm
+  - action: different_form
+  - active_loop: different_form
+  - active_loop: null
+  - action: action_different
+  - action: going_to_do_form
+  - active_loop: going_to_do_form
+  - active_loop: null
+  - action: action_going_to_do
+  - intent: bye
+  - action: utter_bye
+
+
+- story: reallysad1/3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: really_sad
+  - action: utter_really_sad_why
+  - intent: don't_wanna_talk
+  - action: utter_talk_with_someone
+  - intent: deny
+  - action: utter_why_not
+  - intent: emoticon
+  - action: utter_talk_to_me
+  - intent: affirm
+  - action: whats_going_on_form
+  - active_loop: whats_going_on_form
+  - active_loop: null
+  - action: action_whats_going_on
+  - action: feel_form
+  - active_loop: feel_form
+  - active_loop: null
+  - action: action_feel
+  - intent: deny
+  - action: what_happened_form
+  - active_loop: what_happened_form
+  - active_loop: null
+  - action: action_what_happened
+  - action: to_do_now_form
+  - active_loop: to_do_now_form
+  - active_loop: null
+  - action: action_to_do_now
+  - action: best_option_form
+  - active_loop: best_option_form
+  - active_loop: null
+  - action: action_best_option
+  - intent: bye
+  - action: utter_bye
+
+
+- story: reallysad1/4
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: really_sad
+  - action: utter_really_sad_why
+  - intent: don't_wanna_talk
+  - action: utter_talk_with_someone
+  - intent: deny
+  - action: utter_why_not
+  - intent: emoticon
+  - action: utter_talk_to_me
+  - intent: deny
+  - action: utter_talk_something_else
+  - action: utter_conversational_chat
+  - intent: bye
+  - action: utter_bye
+
+
+- story: reallysad2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: really_sad
+  - action: utter_really_sad_why
+  - intent: someone
+    entities:
+    - someone: he
+  - action: action_someone
+  - intent: affirm
+  - action: different_form
+  - active_loop: different_form
+  - active_loop: null
+  - action: action_different
+  - action: going_to_do_form
+  - active_loop: going_to_do_form
+  - active_loop: null
+  - action: action_going_to_do
+  - intent: bye
+  - action: utter_bye
+
+
+- story: reallysad2/1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: really_sad
+  - action: utter_really_sad_why
+  - intent: someone
+    entities:
+    - someone: he
+  - action: action_someone
+  - intent: deny
+  - action: what_happened_form
+  - active_loop: what_happened_form
+  - active_loop: null
+  - action: action_what_happened
+  - action: to_do_now_form
+  - active_loop: to_do_now_form
+  - active_loop: null
+  - action: action_to_do_now
+  - action: best_option_form
+  - active_loop: best_option_form
+  - active_loop: null
+  - action: action_best_option
+  - intent: bye
+  - action: utter_bye
+
+- story: reallysad3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: really_sad
+  - action: utter_really_sad_why
+  - intent: i
+  - action: utter_why_i_sad
+  - intent: deny
+  - action: what_happened_form
+  - active_loop: what_happened_form
+  - active_loop: null
+  - action: action_what_happened
+  - action: to_do_now_form
+  - active_loop: to_do_now_form
+  - active_loop: null
+  - action: action_to_do_now
+  - action: best_option_form
+  - active_loop: best_option_form
+  - active_loop: null
+  - action: action_best_option
+  - intent: bye
+  - action: utter_bye
+
+
+- story: reallysad3/1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: really_sad
+  - action: utter_really_sad_why
+  - intent: i
+  - action: because_form
+  - active_loop: because_form
+  - active_loop: null
+  - action: action_because
+  - action: tell_story_form
+  - active_loop: tell_story_form
+  - active_loop: null
+  - action: action_tell_story
+  - or:
+    - intent: affirm
+    - intent: deny
+  - action: utter_whats_next
+  - or:
+    - intent: not_sure
+    - intent: i_am
+  - action: best_option_form
+  - active_loop: best_option_form
+  - active_loop: null
+  - action: action_best_option
+  - intent: bye
+  - action: utter_bye
+
+
+- story: reallysad4
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: really_sad
+  - action: utter_really_sad_why
+  - intent: not_sure
+  - action: utter_want_a_joke
+  - intent: affirm
+  - action: utter_tells_joke
+  - action: utter_conversational_chat
+
+- story: reallysad4/1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: really_sad
+  - action: utter_really_sad_why
+  - intent: not_sure
+  - action: utter_want_a_joke
+  - intent: its_ok
+  - action: utter_something_else
+  - action: utter_conversational_chat
+
+
+- story: reallysad4/2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: really_sad
+  - action: utter_really_sad_why
+  - intent: deny
+  - action: utter_conversational_chat
+
+
+
+
+
+
+
+
+
+
+
+
+
+

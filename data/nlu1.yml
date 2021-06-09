@@ -1,0 +1,283 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - Hi
+    - Hi there
+    - Hello
+- intent: goodbye
+  examples: |
+    - see you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - Bye
+- intent: affirm
+  examples: |
+    - yes
+    - yeah
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yes please
+    - Yes
+    - Yes of course
+    - Yes I do
+    - Yeah
+    - Yes! I am
+    - Yah, I am finally seeing progress
+    - Yeah disney is fun
+    - Yes!
+    - Yes! I do
+    - Yeah! I do
+- intent: deny
+  examples: |
+    - no
+    - nah
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - no thank you
+    - No
+    - No thank you
+    - Not really
+    - Not really, it makes me sad
+    - Not really, just not sad.
+- intent: fine
+  examples: |
+    - fine
+    - I'm fine
+    - just fine
+    - I am fine
+    - Fine
+    - It's fine, not the best
+- intent: I don't
+  examples: |
+    - I don't want
+    - I don't think I need to
+    - Don't want to
+    - Don't think I need to
+    - I don't have to
+    - Don't have to
+    - Okay, but I don't really want to
+- intent: sad
+  examples: |
+    - I'm feeling sad
+    - I'm sad
+    - feeling sad
+    - sad
+    - Sad
+- intent: nervous
+  examples: |
+    - I'm feeling nervous
+    - I'm nervous
+    - feeling nervous
+    - nervous
+    - I'm feeling anxious
+    - I'm anxious
+    - feeling anxious
+    - anxious
+    - Nervous
+- intent: don't know
+  examples: |
+    - I don't know
+    - Don't know
+    - Just don't know
+    - I have no idea
+    - no idea
+    - no plan
+    - do not know
+    - I do not know
+- intent: good
+  examples: |
+    - good
+    - I'm good
+    - just good
+    - I am good
+    - I am good thanks
+    - Good
+    - I am doing good, how are you?
+    - I am good, but my dog is sick
+    - I am getting more in shape and it feels good
+    - I am good, not great
+    - Because there's nothing wrong happening right now so I feel good
+    - It's going good. No complaints
+    - Good, you?
+- intent: great
+  examples: |
+    - great
+    - I'm great
+    - just great
+    - I am great
+    - I am great thanks
+    - Great
+    - I am doing great!
+- intent: happy
+  examples: |
+    - happy
+    - I'm happy
+    - just happy
+    - I am happy
+    - I am happy thanks
+    - Happy
+    - Yes, I am happy
+- intent: did
+  examples: |
+    - I did my task on time
+    - I did great in my english test
+    - I did a fantastic job in dictation
+    - I did my homework early
+    - I did great job in my spelling test
+    - Did
+    - I am doing okay in school and I haven't been last in PE
+    - I taught my dog a new trick
+    - It's going great! I got 100% on my spelling test
+- intent: going to
+  examples: |
+    - I am going to draw my favourite scene
+    - I am getting ready for going to school
+    - I am going to play with my cousin
+    - I am going to my friends house today
+    - I am going to eat my breakfast
+    - I am going to my spelling test
+    - I am going to my english test
+    - I am going to do my homework
+    - I am going to complete my homework
+    - Going to
+    - going to
+    - I am going to disneyland for the first time
+    - Going to play some video games
+- intent: accomplished
+  examples: |
+    - I have accomplished my work for today
+    - I have done my job well
+    - I have done my task on time
+    - I have got my promotion
+    - I have accomplished my goal
+    - I have done my duty well
+    - I have accomplished my long term goal
+    - I got an award for the best show n tell
+    - Accomplished
+    - I kicked a goal in soccer and I'm so proud of myself
+    - I accomplished a great award
+    - My parents are proud of me
+    - Yes! my parents are proud of me
+- intent: positive
+  examples: |
+    - I am [amazing](positive_word)
+    - I am [brilliant](positive_word)
+    - I am [creative](positive_word)
+    - I am [excited](positive_word)
+    - I am [optimistic](positive_word)
+    - I am [healthy](positive_word)
+    - Yeah I am [excited](positive_word)!
+    - I am [excited](positive_word)! Spotty is doing so well
+    - I am grateful
+    - I am [excited](positive_word) for disneyland
+    - I am [excited](positive_word)!
+    - Yes! Very [excited](positive_word)!
+    - I am only a little [excited](positive_word)
+- intent: celebration
+  examples: |
+    - I will [go out with friends](celebration)
+    - I would [go out with friends](celebration)
+    - I will [go to the beach](celebration)
+    - I would [go to the beach](celebration)
+    - I will [watch a movie](celebration)
+    - I would [watch a movie](celebration)
+- intent: plan
+  examples: |
+    - I think I will [do my homework](plan)
+    - I think I would [do my homework](plan)
+    - I think I will [plan my day](plan)
+    - I think I would [plan my day](plan)
+    - I think I will [visit my friend](plan)
+    - I think I would [visit my friend](plan)
+    - I will [do my homework](plan)
+    - I am planning to do my homework
+    - I think [to](celebration) play dead
+    - I think I will [do homework](plan)
+- intent: not sure
+  examples: |
+    - I am not sure
+    - not sure
+    - I am not sure what I will do
+    - I'm not sure
+    - I am unsure
+    - unsure
+    - I am unsure about this
+    - I am not sure about this
+    - Not sure, I hope to get ice cream
+    - Not sure
+- intent: ok
+  examples: |
+    - It's okay
+    - It's ok
+    - okay
+    - ok
+    - yea it's ok
+    - yea it is ok
+    - yes its okay
+    - its okay
+    - its ok
+    - Okay
+- intent: I know
+  examples: |
+    - I know
+    - yes I know
+    - yea I know
+    - I know this
+    - I know right
+    - of course I know
+    - of course I know right
+- intent: I hope
+  examples: |
+    - I hope
+    - I hope so
+    - hope so
+    - lets hope
+    - I do hope so
+    - yes i hope so
+    - yea i hope so
+    - Yeah I hope to kick more in the future
+    - I hope to teach him more tricks
+- intent: nlu_fallback
+  examples: |
+    - Just random text
+    - Just some random text
+    - I love you
+    - random text
+- intent: movies
+  examples: |
+    - movies
+- intent: family or friends
+  examples: |
+    - family or friends
+- intent: sports
+  examples: |
+    - sports
+- intent: food
+  examples: |
+    - food
+- intent: music
+  examples: |
+    - music
+

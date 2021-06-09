@@ -1,0 +1,3529 @@
+version: "2.0"
+stories:
+- story: goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+- story: fallback
+  steps:
+  - intent: nlu_fallback
+  - action: action_two_stage_fallback
+  - active_loop: action_two_stage_fallback
+- story: path1_good
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: did
+  - action: utter_after_did
+  - intent: celebration
+    entities:
+    - celebration: go to the beach
+  - action: action_submit_celebration
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: movies
+  - action: movie_form
+  - active_loop: movie_form
+  - active_loop: null
+  - action: action_movie
+- story: path1_goodconvo1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: did
+  - action: utter_after_did
+  - intent: celebration
+    entities:
+    - celebration: go to the beach
+  - action: action_submit_celebration
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: family or friends
+  - action: familyorfriends_form
+  - active_loop: familyorfriends_form
+  - active_loop: null
+  - action: action_familyfriends
+- story: path1_goodconvo2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: did
+  - action: utter_after_did
+  - intent: celebration
+    entities:
+    - celebration: go to the beach
+  - action: action_submit_celebration
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: sports
+  - action: sports_form
+  - active_loop: sports_form
+  - active_loop: null
+  - action: action_sports
+- story: path1_goodconvo3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: did
+  - action: utter_after_did
+  - intent: celebration
+    entities:
+    - celebration: go to the beach
+  - action: action_submit_celebration
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: food
+  - action: food_form
+  - active_loop: food_form
+  - active_loop: null
+  - action: action_food
+- story: path1_goodconvo4
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: did
+  - action: utter_after_did
+  - intent: celebration
+    entities:
+    - celebration: go to the beach
+  - action: action_submit_celebration
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: music
+  - action: music_form
+  - active_loop: music_form
+  - active_loop: null
+  - action: action_music
+- story: path1_good/2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: did
+  - action: utter_after_did
+  - intent: not sure
+  - action: fun_form
+  - active_loop: fun_form
+  - active_loop: null
+  - action: action_fun
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: movies
+  - action: movie_form
+  - active_loop: movie_form
+  - active_loop: null
+  - action: action_movie
+- story: path1_good/2convo1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: did
+  - action: utter_after_did
+  - intent: not sure
+  - action: fun_form
+  - active_loop: fun_form
+  - active_loop: null
+  - action: action_fun
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: family or friends
+  - action: familyorfriends_form
+  - active_loop: familyorfriends_form
+  - active_loop: null
+  - action: action_familyfriends
+- story: path1_good/2convo2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: did
+  - action: utter_after_did
+  - intent: not sure
+  - action: fun_form
+  - active_loop: fun_form
+  - active_loop: null
+  - action: action_fun
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: sports
+  - action: sports_form
+  - active_loop: sports_form
+  - active_loop: null
+  - action: action_sports
+- story: path1_good/2convo3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: did
+  - action: utter_after_did
+  - intent: not sure
+  - action: fun_form
+  - active_loop: fun_form
+  - active_loop: null
+  - action: action_fun
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: food
+  - action: food_form
+  - active_loop: food_form
+  - active_loop: null
+  - action: action_food
+- story: path1_good/2convo4
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: did
+  - action: utter_after_did
+  - intent: not sure
+  - action: fun_form
+  - active_loop: fun_form
+  - active_loop: null
+  - action: action_fun
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: music
+  - action: music_form
+  - active_loop: music_form
+  - active_loop: null
+  - action: action_music
+- story: path1_good/3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: did
+  - action: utter_after_did
+  - intent: not sure
+  - action: fun_form
+  - active_loop: fun_form
+  - active_loop: null
+  - action: action_fun
+  - intent: deny
+  - action: utter_end_chat
+- story: path1_good/1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: did
+  - action: utter_after_did
+  - intent: celebration
+    entities:
+    - celebration: go to the beach
+  - action: action_submit_celebration
+  - intent: deny
+  - action: utter_end_chat
+- story: path1_good1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: going to
+  - action: utter_after_going_to
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: movies
+  - action: movie_form
+  - active_loop: movie_form
+  - active_loop: null
+  - action: action_movie
+- story: path1_good1convo1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: going to
+  - action: utter_after_going_to
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: family or friends
+  - action: familyorfriends_form
+  - active_loop: familyorfriends_form
+  - active_loop: null
+  - action: action_familyfriends
+- story: path1_good1convo2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: going to
+  - action: utter_after_going_to
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: sports
+  - action: sports_form
+  - active_loop: sports_form
+  - active_loop: null
+  - action: action_sports
+- story: path1_good1convo3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: going to
+  - action: utter_after_going_to
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: food
+  - action: food_form
+  - active_loop: food_form
+  - active_loop: null
+  - action: action_food
+- story: path1_good1convo4
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: going to
+  - action: utter_after_going_to
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: music
+  - action: music_form
+  - active_loop: music_form
+  - active_loop: null
+  - action: action_music
+- story: path1_good1/1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: going to
+  - action: utter_after_going_to
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: deny
+  - action: utter_end_chat
+- story: path1_good1/2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: going to
+  - action: utter_after_going_to
+  - intent: deny
+  - action: because_form
+  - active_loop: because_form
+  - active_loop: null
+  - action: action_because
+  - intent: affirm
+  - action: utter_leaves_chat
+- story: path1_good1/3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: going to
+  - action: utter_after_going_to
+  - intent: deny
+  - action: because_form
+  - active_loop: because_form
+  - active_loop: null
+  - action: action_because
+  - intent: deny
+  - action: utter_end_chat
+- story: path1_good2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: accomplished
+  - action: utter_after_accomplished
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: movies
+  - action: movie_form
+  - active_loop: movie_form
+  - active_loop: null
+  - action: action_movie
+- story: path1_good2convo1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: accomplished
+  - action: utter_after_accomplished
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: family or friends
+  - action: familyorfriends_form
+  - active_loop: familyorfriends_form
+  - active_loop: null
+  - action: action_familyfriends
+- story: path1_good2convo2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: accomplished
+  - action: utter_after_accomplished
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: sports
+  - action: sports_form
+  - active_loop: sports_form
+  - active_loop: null
+  - action: action_sports
+- story: path1_good2convo3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: accomplished
+  - action: utter_after_accomplished
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: food
+  - action: food_form
+  - active_loop: food_form
+  - active_loop: null
+  - action: action_food
+- story: path1_good2convo4
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: accomplished
+  - action: utter_after_accomplished
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: music
+  - action: music_form
+  - active_loop: music_form
+  - active_loop: null
+  - action: action_music
+- story: path1_good2/1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: accomplished
+  - action: utter_after_accomplished
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: deny
+  - action: utter_end_chat
+- story: path1_good2/2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: accomplished
+  - action: utter_after_accomplished
+  - intent: deny
+  - action: because_form
+  - active_loop: because_form
+  - active_loop: null
+  - action: action_because
+  - intent: affirm
+  - action: utter_leaves_chat
+- story: path1_good2/3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: accomplished
+  - action: utter_after_accomplished
+  - intent: deny
+  - action: because_form
+  - active_loop: because_form
+  - active_loop: null
+  - action: action_because
+  - intent: deny
+  - action: utter_end_chat
+- story: path1_good3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: affirm
+  - action: utter_have_confidence
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: movies
+  - action: movie_form
+  - active_loop: movie_form
+  - active_loop: null
+  - action: action_movie
+- story: path1_good3convo1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: affirm
+  - action: utter_have_confidence
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: family or friends
+  - action: familyorfriends_form
+  - active_loop: familyorfriends_form
+  - active_loop: null
+  - action: action_familyfriends
+- story: path1_good3convo2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: affirm
+  - action: utter_have_confidence
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: sports
+  - action: sports_form
+  - active_loop: sports_form
+  - active_loop: null
+  - action: action_sports
+- story: path1_good3convo3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: affirm
+  - action: utter_have_confidence
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: food
+  - action: food_form
+  - active_loop: food_form
+  - active_loop: null
+  - action: action_food
+- story: path1_good3convo4
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: affirm
+  - action: utter_have_confidence
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: music
+  - action: music_form
+  - active_loop: music_form
+  - active_loop: null
+  - action: action_music
+- story: path1_good3/1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: affirm
+  - action: utter_have_confidence
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: plan
+    entities:
+    - plan: do my homework
+  - action: action_plan
+- story: path1_good3/2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: ok
+  - action: utter_be_excited
+  - intent: I know
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: movies
+  - action: movie_form
+  - active_loop: movie_form
+  - active_loop: null
+  - action: action_movie
+- story: path1_good3/2convo1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: ok
+  - action: utter_be_excited
+  - intent: I know
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: family or friends
+  - action: familyorfriends_form
+  - active_loop: familyorfriends_form
+  - active_loop: null
+  - action: action_familyfriends
+- story: path1_good3/2convo2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: ok
+  - action: utter_be_excited
+  - intent: I know
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: sports
+  - action: sports_form
+  - active_loop: sports_form
+  - active_loop: null
+  - action: action_sports
+- story: path1_good3/2convo3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: ok
+  - action: utter_be_excited
+  - intent: I know
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: food
+  - action: food_form
+  - active_loop: food_form
+  - active_loop: null
+  - action: action_food
+- story: path1_good3/2convo4
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: ok
+  - action: utter_be_excited
+  - intent: I know
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: music
+  - action: music_form
+  - active_loop: music_form
+  - active_loop: null
+  - action: action_music
+- story: path1_good3/3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: ok
+  - action: utter_be_excited
+  - intent: I know
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: plan
+    entities:
+    - plan: do my homework
+  - action: action_plan
+- story: path1_good3/4
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: I hope
+  - action: utter_donot_worry
+  - action: utter_time_celebrate
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: movies
+  - action: movie_form
+  - active_loop: movie_form
+  - active_loop: null
+  - action: action_movie
+- story: path1_good3/4convo1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: I hope
+  - action: utter_donot_worry
+  - action: utter_time_celebrate
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: family or friends
+  - action: familyorfriends_form
+  - active_loop: familyorfriends_form
+  - active_loop: null
+  - action: action_familyfriends
+- story: path1_good3/4convo2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: I hope
+  - action: utter_donot_worry
+  - action: utter_time_celebrate
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: sports
+  - action: sports_form
+  - active_loop: sports_form
+  - active_loop: null
+  - action: action_sports
+- story: path1_good3/4convo3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: I hope
+  - action: utter_donot_worry
+  - action: utter_time_celebrate
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: food
+  - action: food_form
+  - active_loop: food_form
+  - active_loop: null
+  - action: action_food
+- story: path1_good3/4convo4
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: I hope
+  - action: utter_donot_worry
+  - action: utter_time_celebrate
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: music
+  - action: music_form
+  - active_loop: music_form
+  - active_loop: null
+  - action: action_music
+- story: path1_good3/5
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: good
+  - action: utter_mood_good
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: I hope
+  - action: utter_donot_worry
+  - action: utter_time_celebrate
+  - action: utter_plans_next
+  - intent: plan
+    entities:
+    - plan: do my homework
+  - action: action_plan
+- story: path1_great
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: did
+  - action: utter_after_did
+  - intent: celebration
+    entities:
+    - celebration: go to the beach
+  - action: action_submit_celebration
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: movies
+  - action: movie_form
+  - active_loop: movie_form
+  - active_loop: null
+  - action: action_movie
+- story: path1_greatconvo1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: did
+  - action: utter_after_did
+  - intent: celebration
+    entities:
+    - celebration: go to the beach
+  - action: action_submit_celebration
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: family or friends
+  - action: familyorfriends_form
+  - active_loop: familyorfriends_form
+  - active_loop: null
+  - action: action_familyfriends
+- story: path1_greatconvo2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: did
+  - action: utter_after_did
+  - intent: celebration
+    entities:
+    - celebration: go to the beach
+  - action: action_submit_celebration
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: sports
+  - action: sports_form
+  - active_loop: sports_form
+  - active_loop: null
+  - action: action_sports
+- story: path1_greatconvo3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: did
+  - action: utter_after_did
+  - intent: celebration
+    entities:
+    - celebration: go to the beach
+  - action: action_submit_celebration
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: food
+  - action: food_form
+  - active_loop: food_form
+  - active_loop: null
+  - action: action_food
+- story: path1_greatconvo4
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: did
+  - action: utter_after_did
+  - intent: celebration
+    entities:
+    - celebration: go to the beach
+  - action: action_submit_celebration
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: music
+  - action: music_form
+  - active_loop: music_form
+  - active_loop: null
+  - action: action_music
+- story: path1_great/2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: did
+  - action: utter_after_did
+  - intent: not sure
+  - action: fun_form
+  - active_loop: fun_form
+  - active_loop: null
+  - action: action_fun
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: movies
+  - action: movie_form
+  - active_loop: movie_form
+  - active_loop: null
+  - action: action_movie
+- story: path1_great/2convo1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: did
+  - action: utter_after_did
+  - intent: not sure
+  - action: fun_form
+  - active_loop: fun_form
+  - active_loop: null
+  - action: action_fun
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: family or friends
+  - action: familyorfriends_form
+  - active_loop: familyorfriends_form
+  - active_loop: null
+  - action: action_familyfriends
+- story: path1_great/2convo2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: did
+  - action: utter_after_did
+  - intent: not sure
+  - action: fun_form
+  - active_loop: fun_form
+  - active_loop: null
+  - action: action_fun
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: sports
+  - action: sports_form
+  - active_loop: sports_form
+  - active_loop: null
+  - action: action_sports
+- story: path1_great/2convo3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: did
+  - action: utter_after_did
+  - intent: not sure
+  - action: fun_form
+  - active_loop: fun_form
+  - active_loop: null
+  - action: action_fun
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: food
+  - action: food_form
+  - active_loop: food_form
+  - active_loop: null
+  - action: action_food
+- story: path1_great/2convo4
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: did
+  - action: utter_after_did
+  - intent: not sure
+  - action: fun_form
+  - active_loop: fun_form
+  - active_loop: null
+  - action: action_fun
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: music
+  - action: music_form
+  - active_loop: music_form
+  - active_loop: null
+  - action: action_music
+- story: path1_great/3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: did
+  - action: utter_after_did
+  - intent: not sure
+  - action: fun_form
+  - active_loop: fun_form
+  - active_loop: null
+  - action: action_fun
+  - intent: affirm
+  - action: utter_end_chat
+- story: path1_great/2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: did
+  - action: utter_after_did
+  - intent: not sure
+  - action: fun_form
+  - active_loop: fun_form
+  - active_loop: null
+  - action: action_fun
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: movies
+  - action: movie_form
+  - active_loop: movie_form
+  - active_loop: null
+  - action: action_movie
+- story: path1_great/2convo1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: did
+  - action: utter_after_did
+  - intent: not sure
+  - action: fun_form
+  - active_loop: fun_form
+  - active_loop: null
+  - action: action_fun
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: family or friends
+  - action: familyorfriends_form
+  - active_loop: familyorfriends_form
+  - active_loop: null
+  - action: action_familyfriends
+- story: path1_great/2convo2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: did
+  - action: utter_after_did
+  - intent: not sure
+  - action: fun_form
+  - active_loop: fun_form
+  - active_loop: null
+  - action: action_fun
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: sports
+  - action: sports_form
+  - active_loop: sports_form
+  - active_loop: null
+  - action: action_sports
+- story: path1_great/2convo3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: did
+  - action: utter_after_did
+  - intent: not sure
+  - action: fun_form
+  - active_loop: fun_form
+  - active_loop: null
+  - action: action_fun
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: food
+  - action: food_form
+  - active_loop: food_form
+  - active_loop: null
+  - action: action_food
+- story: path1_great/2convo4
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: did
+  - action: utter_after_did
+  - intent: not sure
+  - action: fun_form
+  - active_loop: fun_form
+  - active_loop: null
+  - action: action_fun
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: music
+  - action: music_form
+  - active_loop: music_form
+  - active_loop: null
+  - action: action_music
+- story: path1_great/1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: did
+  - action: utter_after_did
+  - intent: celebration
+    entities:
+    - celebration: go to the beach
+  - action: action_submit_celebration
+  - intent: deny
+  - action: utter_end_chat
+- story: path1_great1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: going to
+  - action: utter_after_going_to
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: movies
+  - action: movie_form
+  - active_loop: movie_form
+  - active_loop: null
+  - action: action_movie
+- story: path1_great1convo1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: going to
+  - action: utter_after_going_to
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: family or friends
+  - action: familyorfriends_form
+  - active_loop: familyorfriends_form
+  - active_loop: null
+  - action: action_familyfriends
+- story: path1_great1convo2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: going to
+  - action: utter_after_going_to
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: sports
+  - action: sports_form
+  - active_loop: sports_form
+  - active_loop: null
+  - action: action_sports
+- story: path1_great1convo3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: going to
+  - action: utter_after_going_to
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: food
+  - action: food_form
+  - active_loop: food_form
+  - active_loop: null
+  - action: action_food
+- story: path1_great1convo4
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: going to
+  - action: utter_after_going_to
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: music
+  - action: music_form
+  - active_loop: music_form
+  - active_loop: null
+  - action: action_music
+- story: path1_great1/1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: going to
+  - action: utter_after_going_to
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: deny
+  - action: utter_end_chat
+- story: path1_great1/2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: going to
+  - action: utter_after_going_to
+  - intent: deny
+  - action: because_form
+  - active_loop: because_form
+  - active_loop: null
+  - action: action_because
+  - intent: affirm
+  - action: utter_leaves_chat
+- story: path1_great1/3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: going to
+  - action: utter_after_going_to
+  - intent: deny
+  - action: because_form
+  - active_loop: because_form
+  - active_loop: null
+  - action: action_because
+  - intent: deny
+  - action: utter_end_chat
+- story: path1_great2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: accomplished
+  - action: utter_after_accomplished
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: movies
+  - action: movie_form
+  - active_loop: movie_form
+  - active_loop: null
+  - action: action_movie
+- story: path1_great2convo1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: accomplished
+  - action: utter_after_accomplished
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: family or friends
+  - action: familyorfriends_form
+  - active_loop: familyorfriends_form
+  - active_loop: null
+  - action: action_familyfriends
+- story: path1_great2convo2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: accomplished
+  - action: utter_after_accomplished
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: sports
+  - action: sports_form
+  - active_loop: sports_form
+  - active_loop: null
+  - action: action_sports
+- story: path1_great2convo3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: accomplished
+  - action: utter_after_accomplished
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: food
+  - action: food_form
+  - active_loop: food_form
+  - active_loop: null
+  - action: action_food
+- story: path1_great2convo4
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: accomplished
+  - action: utter_after_accomplished
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: music
+  - action: music_form
+  - active_loop: music_form
+  - active_loop: null
+  - action: action_music
+- story: path1_great2/1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: accomplished
+  - action: utter_after_accomplished
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: deny
+  - action: utter_end_chat
+- story: path1_great2/2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: accomplished
+  - action: utter_after_accomplished
+  - intent: deny
+  - action: because_form
+  - active_loop: because_form
+  - active_loop: null
+  - action: action_because
+  - intent: affirm
+  - action: utter_leaves_chat
+- story: path1_great2/3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: accomplished
+  - action: utter_after_accomplished
+  - intent: deny
+  - action: because_form
+  - active_loop: because_form
+  - active_loop: null
+  - action: action_because
+  - intent: deny
+  - action: utter_end_chat
+- story: path1_great3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: affirm
+  - action: utter_have_confidence
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: movies
+  - action: movie_form
+  - active_loop: movie_form
+  - active_loop: null
+  - action: action_movie
+- story: path1_great3convo1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: affirm
+  - action: utter_have_confidence
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: family or friends
+  - action: familyorfriends_form
+  - active_loop: familyorfriends_form
+  - active_loop: null
+  - action: action_familyfriends
+- story: path1_great3convo2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: affirm
+  - action: utter_have_confidence
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: sports
+  - action: sports_form
+  - active_loop: sports_form
+  - active_loop: null
+  - action: action_sports
+- story: path1_great3convo3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: affirm
+  - action: utter_have_confidence
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: food
+  - action: food_form
+  - active_loop: food_form
+  - active_loop: null
+  - action: action_food
+- story: path1_great3convo4
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: affirm
+  - action: utter_have_confidence
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: music
+  - action: music_form
+  - active_loop: music_form
+  - active_loop: null
+  - action: action_music
+- story: path1_great3/1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: affirm
+  - action: utter_have_confidence
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: plan
+    entities:
+    - plan: do my homework
+  - action: action_plan
+- story: path1_great3/2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: ok
+  - action: utter_be_excited
+  - intent: I know
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: movies
+  - action: movie_form
+  - active_loop: movie_form
+  - active_loop: null
+  - action: action_movie
+- story: path1_great3/2convo1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: ok
+  - action: utter_be_excited
+  - intent: I know
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: family or friends
+  - action: familyorfriends_form
+  - active_loop: familyorfriends_form
+  - active_loop: null
+  - action: action_familyfriends
+- story: path1_great3/2convo2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: ok
+  - action: utter_be_excited
+  - intent: I know
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: sports
+  - action: sports_form
+  - active_loop: sports_form
+  - active_loop: null
+  - action: action_sports
+- story: path1_great3/2convo3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: ok
+  - action: utter_be_excited
+  - intent: I know
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: food
+  - action: food_form
+  - active_loop: food_form
+  - active_loop: null
+  - action: action_food
+- story: path1_great3/2convo4
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: ok
+  - action: utter_be_excited
+  - intent: I know
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: music
+  - action: music_form
+  - active_loop: music_form
+  - active_loop: null
+  - action: action_music
+- story: path1_great3/3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: ok
+  - action: utter_be_excited
+  - intent: I know
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: plan
+    entities:
+    - plan: do my homework
+  - action: action_plan
+- story: path1_great3/4
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: I hope
+  - action: utter_donot_worry
+  - action: utter_time_celebrate
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: movies
+  - action: movie_form
+  - active_loop: movie_form
+  - active_loop: null
+  - action: action_movie
+- story: path1_great3/4convo1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: I hope
+  - action: utter_donot_worry
+  - action: utter_time_celebrate
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: family or friends
+  - action: familyorfriends_form
+  - active_loop: familyorfriends_form
+  - active_loop: null
+  - action: action_familyfriends
+- story: path1_great3/4convo2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: I hope
+  - action: utter_donot_worry
+  - action: utter_time_celebrate
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: sports
+  - action: sports_form
+  - active_loop: sports_form
+  - active_loop: null
+  - action: action_sports
+- story: path1_great3/4convo3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: I hope
+  - action: utter_donot_worry
+  - action: utter_time_celebrate
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: food
+  - action: food_form
+  - active_loop: food_form
+  - active_loop: null
+  - action: action_food
+- story: path1_great3/4convo4
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: I hope
+  - action: utter_donot_worry
+  - action: utter_time_celebrate
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: music
+  - action: music_form
+  - active_loop: music_form
+  - active_loop: null
+  - action: action_music
+- story: path1_great3/5
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: great
+  - action: utter_mood_great
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: I hope
+  - action: utter_donot_worry
+  - action: utter_time_celebrate
+  - action: utter_plans_next
+  - intent: plan
+    entities:
+    - plan: do my homework
+  - action: action_plan
+- story: path1_happy
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: did
+  - action: utter_after_did
+  - intent: celebration
+    entities:
+    - celebration: go to the beach
+  - action: action_submit_celebration
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: movies
+  - action: movie_form
+  - active_loop: movie_form
+  - active_loop: null
+  - action: action_movie
+- story: path1_happyconvo1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: did
+  - action: utter_after_did
+  - intent: celebration
+    entities:
+    - celebration: go to the beach
+  - action: action_submit_celebration
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: family or friends
+  - action: familyorfriends_form
+  - active_loop: familyorfriends_form
+  - active_loop: null
+  - action: action_familyfriends
+- story: path1_happyconvo2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: did
+  - action: utter_after_did
+  - intent: celebration
+    entities:
+    - celebration: go to the beach
+  - action: action_submit_celebration
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: sports
+  - action: sports_form
+  - active_loop: sports_form
+  - active_loop: null
+  - action: action_sports
+- story: path1_happyconvo3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: did
+  - action: utter_after_did
+  - intent: celebration
+    entities:
+    - celebration: go to the beach
+  - action: action_submit_celebration
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: food
+  - action: food_form
+  - active_loop: food_form
+  - active_loop: null
+  - action: action_food
+- story: path1_happyconvo4
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: did
+  - action: utter_after_did
+  - intent: celebration
+    entities:
+    - celebration: go to the beach
+  - action: action_submit_celebration
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: music
+  - action: music_form
+  - active_loop: music_form
+  - active_loop: null
+  - action: action_music
+- story: path1_happy/1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: did
+  - action: utter_after_did
+  - intent: celebration
+    entities:
+    - celebration: go to the beach
+  - action: action_submit_celebration
+  - intent: deny
+  - action: utter_end_chat
+- story: path1_happy/2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: did
+  - action: utter_after_did
+  - intent: not sure
+  - action: fun_form
+  - active_loop: fun_form
+  - active_loop: null
+  - action: action_fun
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: movies
+  - action: movie_form
+  - active_loop: movie_form
+  - active_loop: null
+  - action: action_movie
+- story: path1_happy/2convo1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: did
+  - action: utter_after_did
+  - intent: not sure
+  - action: fun_form
+  - active_loop: fun_form
+  - active_loop: null
+  - action: action_fun
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: family or friends
+  - action: familyorfriends_form
+  - active_loop: familyorfriends_form
+  - active_loop: null
+  - action: action_familyfriends
+- story: path1_happy/2convo2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: did
+  - action: utter_after_did
+  - intent: not sure
+  - action: fun_form
+  - active_loop: fun_form
+  - active_loop: null
+  - action: action_fun
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: sports
+  - action: sports_form
+  - active_loop: sports_form
+  - active_loop: null
+  - action: action_sports
+- story: path1_happy/2convo3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: did
+  - action: utter_after_did
+  - intent: not sure
+  - action: fun_form
+  - active_loop: fun_form
+  - active_loop: null
+  - action: action_fun
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: food
+  - action: food_form
+  - active_loop: food_form
+  - active_loop: null
+  - action: action_food
+- story: path1_happy/2convo4
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: did
+  - action: utter_after_did
+  - intent: not sure
+  - action: fun_form
+  - active_loop: fun_form
+  - active_loop: null
+  - action: action_fun
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: music
+  - action: music_form
+  - active_loop: music_form
+  - active_loop: null
+  - action: action_music
+- story: path1_happy/3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: did
+  - action: utter_after_did
+  - intent: not sure
+  - action: fun_form
+  - active_loop: fun_form
+  - active_loop: null
+  - action: action_fun
+  - intent: affirm
+  - action: utter_end_chat
+- story: path1_happy1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: going to
+  - action: utter_after_going_to
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: movies
+  - action: movie_form
+  - active_loop: movie_form
+  - active_loop: null
+  - action: action_movie
+- story: path1_happy1convo1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: going to
+  - action: utter_after_going_to
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: family or friends
+  - action: familyorfriends_form
+  - active_loop: familyorfriends_form
+  - active_loop: null
+  - action: action_familyfriends
+- story: path1_happy1convo2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: going to
+  - action: utter_after_going_to
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: sports
+  - action: sports_form
+  - active_loop: sports_form
+  - active_loop: null
+  - action: action_sports
+- story: path1_happy1convo3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: going to
+  - action: utter_after_going_to
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: food
+  - action: food_form
+  - active_loop: food_form
+  - active_loop: null
+  - action: action_food
+- story: path1_happy1convo4
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: going to
+  - action: utter_after_going_to
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: music
+  - action: music_form
+  - active_loop: music_form
+  - active_loop: null
+  - action: action_music
+- story: path1_happy1/1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: going to
+  - action: utter_after_going_to
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: deny
+  - action: utter_end_chat
+- story: path1_happy1/2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: going to
+  - action: utter_after_going_to
+  - intent: deny
+  - action: because_form
+  - active_loop: because_form
+  - active_loop: null
+  - action: action_because
+  - intent: affirm
+  - action: utter_leaves_chat
+- story: path1_happy1/3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: going to
+  - action: utter_after_going_to
+  - intent: deny
+  - action: because_form
+  - active_loop: because_form
+  - active_loop: null
+  - action: action_because
+  - intent: deny
+  - action: utter_end_chat
+- story: path1_happy2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: accomplished
+  - action: utter_after_accomplished
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: movies
+  - action: movie_form
+  - active_loop: movie_form
+  - active_loop: null
+  - action: action_movie
+- story: path1_happy2convo1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: accomplished
+  - action: utter_after_accomplished
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: family or friends
+  - action: familyorfriends_form
+  - active_loop: familyorfriends_form
+  - active_loop: null
+  - action: action_familyfriends
+- story: path1_happy2convo2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: accomplished
+  - action: utter_after_accomplished
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: sports
+  - action: sports_form
+  - active_loop: sports_form
+  - active_loop: null
+  - action: action_sports
+- story: path1_happy2convo3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: accomplished
+  - action: utter_after_accomplished
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: food
+  - action: food_form
+  - active_loop: food_form
+  - active_loop: null
+  - action: action_food
+- story: path1_happy2convo4
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: accomplished
+  - action: utter_after_accomplished
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: affirm
+  - action: utter_something_new
+  - action: utter_conversation
+  - intent: music
+  - action: music_form
+  - active_loop: music_form
+  - active_loop: null
+  - action: action_music
+- story: path1_happy2/1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: accomplished
+  - action: utter_after_accomplished
+  - intent: affirm
+  - action: proud_form
+  - active_loop: proud_form
+  - active_loop: null
+  - action: action_proud
+  - intent: deny
+  - action: utter_end_chat
+- story: path1_happy2/2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: accomplished
+  - action: utter_after_accomplished
+  - intent: deny
+  - action: because_form
+  - active_loop: because_form
+  - active_loop: null
+  - action: action_because
+  - intent: affirm
+  - action: utter_leaves_chat
+- story: path1_happy2/3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: accomplished
+  - action: utter_after_accomplished
+  - intent: deny
+  - action: because_form
+  - active_loop: because_form
+  - active_loop: null
+  - action: action_because
+  - intent: deny
+  - action: utter_end_chat
+- story: path1_happy3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: affirm
+  - action: utter_have_confidence
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: movies
+  - action: movie_form
+  - active_loop: movie_form
+  - active_loop: null
+  - action: action_movie
+- story: path1_happy3convo1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: affirm
+  - action: utter_have_confidence
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: family or friends
+  - action: familyorfriends_form
+  - active_loop: familyorfriends_form
+  - active_loop: null
+  - action: action_familyfriends
+- story: path1_happy3convo2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: affirm
+  - action: utter_have_confidence
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: sports
+  - action: sports_form
+  - active_loop: sports_form
+  - active_loop: null
+  - action: action_sports
+- story: path1_happy3convo3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: affirm
+  - action: utter_have_confidence
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: food
+  - action: food_form
+  - active_loop: food_form
+  - active_loop: null
+  - action: action_food
+- story: path1_happy3convo4
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: affirm
+  - action: utter_have_confidence
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: music
+  - action: music_form
+  - active_loop: music_form
+  - active_loop: null
+  - action: action_music
+- story: path1_happy3/1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: affirm
+  - action: utter_have_confidence
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: plan
+    entities:
+    - plan: do my homework
+  - action: action_plan
+- story: path1_happy3/2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: ok
+  - action: utter_be_excited
+  - intent: I know
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: movies
+  - action: movie_form
+  - active_loop: movie_form
+  - active_loop: null
+  - action: action_movie
+- story: path1_happy3/2convo1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: ok
+  - action: utter_be_excited
+  - intent: I know
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: family or friends
+  - action: familyorfriends_form
+  - active_loop: familyorfriends_form
+  - active_loop: null
+  - action: action_familyfriends
+- story: path1_happy3/2convo2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: ok
+  - action: utter_be_excited
+  - intent: I know
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: sports
+  - action: sports_form
+  - active_loop: sports_form
+  - active_loop: null
+  - action: action_sports
+- story: path1_happy3/2convo3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: ok
+  - action: utter_be_excited
+  - intent: I know
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: food
+  - action: food_form
+  - active_loop: food_form
+  - active_loop: null
+  - action: action_food
+- story: path1_happy3/2convo4
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: ok
+  - action: utter_be_excited
+  - intent: I know
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: music
+  - action: music_form
+  - active_loop: music_form
+  - active_loop: null
+  - action: action_music
+- story: path1_happy3/3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: ok
+  - action: utter_be_excited
+  - intent: I know
+  - action: utter_Iam_proud
+  - action: utter_plans_next
+  - intent: plan
+    entities:
+    - plan: do my homework
+  - action: action_plan
+- story: path1_happy3/4
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: I hope
+  - action: utter_donot_worry
+  - action: utter_time_celebrate
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: movies
+  - action: movie_form
+  - active_loop: movie_form
+  - active_loop: null
+  - action: action_movie
+- story: path1_happy3/4convo1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: I hope
+  - action: utter_donot_worry
+  - action: utter_time_celebrate
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: family or friends
+  - action: familyorfriends_form
+  - active_loop: familyorfriends_form
+  - active_loop: null
+  - action: action_familyfriends
+- story: path1_happy3/4convo2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: I hope
+  - action: utter_donot_worry
+  - action: utter_time_celebrate
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: sports
+  - action: sports_form
+  - active_loop: sports_form
+  - active_loop: null
+  - action: action_sports
+- story: path1_happy3/4convo3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: I hope
+  - action: utter_donot_worry
+  - action: utter_time_celebrate
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: food
+  - action: food_form
+  - active_loop: food_form
+  - active_loop: null
+  - action: action_food
+- story: path1_happy3/4convo4
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: I hope
+  - action: utter_donot_worry
+  - action: utter_time_celebrate
+  - action: utter_plans_next
+  - intent: don't know
+  - action: utter_no_worries
+  - action: utter_conversation
+  - intent: music
+  - action: music_form
+  - active_loop: music_form
+  - active_loop: null
+  - action: action_music
+- story: path1_happy3/5
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: happy
+  - action: utter_mood_happy
+  - intent: positive
+    entities:
+    - positive_word: excited
+  - action: action_submit_positive
+  - intent: I hope
+  - action: utter_donot_worry
+  - action: utter_time_celebrate
+  - action: utter_plans_next
+  - intent: plan
+    entities:
+    - plan: do my homework
+  - action: action_plan
+- story: path1_fine1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: fine
+  - action: fine_reason_form
+  - active_loop: fine_reason_form
+  - active_loop: null
+  - action: action_fine_reason
+  - intent: affirm
+  - action: whats_going_on_form
+  - active_loop: whats_going_on_form
+  - active_loop: null
+  - action: action_whats_going_on
+  - intent: affirm
+  - action: utter_what_feeling
+  - intent: sad
+  - action: utter_chat_simon
+- story: path1_fine1/4
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: fine
+  - action: fine_reason_form
+  - active_loop: fine_reason_form
+  - active_loop: null
+  - action: action_fine_reason
+  - intent: affirm
+  - action: whats_going_on_form
+  - active_loop: whats_going_on_form
+  - active_loop: null
+  - action: action_whats_going_on
+  - intent: affirm
+  - action: utter_what_feeling
+  - intent: nervous
+  - action: utter_chat_ana
+- story: path1_fine1/5
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: fine
+  - action: fine_reason_form
+  - active_loop: fine_reason_form
+  - active_loop: null
+  - action: action_fine_reason
+  - intent: affirm
+  - action: whats_going_on_form
+  - active_loop: whats_going_on_form
+  - active_loop: null
+  - action: action_whats_going_on
+  - intent: affirm
+  - action: utter_what_feeling
+  - intent: don't know
+  - action: feeling_form
+  - active_loop: feeling_form
+  - active_loop: null
+  - action: action_feeling
+  - action: feel_reason_form
+  - active_loop: feel_reason_form
+  - active_loop: null
+  - action: action_feel_reason
+  - intent: affirm
+  - action: utter_somethingelse
+  - action: utter_conversation
+  - intent: movies
+  - action: movie_form
+  - active_loop: movie_form
+  - active_loop: null
+  - action: action_movie
+- story: path1_fine1/5convo1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: fine
+  - action: fine_reason_form
+  - active_loop: fine_reason_form
+  - active_loop: null
+  - action: action_fine_reason
+  - intent: affirm
+  - action: whats_going_on_form
+  - active_loop: whats_going_on_form
+  - active_loop: null
+  - action: action_whats_going_on
+  - intent: affirm
+  - action: utter_what_feeling
+  - intent: don't know
+  - action: feeling_form
+  - active_loop: feeling_form
+  - active_loop: null
+  - action: action_feeling
+  - action: feel_reason_form
+  - active_loop: feel_reason_form
+  - active_loop: null
+  - action: action_feel_reason
+  - intent: affirm
+  - action: utter_somethingelse
+  - action: utter_conversation
+  - intent: family or friends
+  - action: familyorfriends_form
+  - active_loop: familyorfriends_form
+  - active_loop: null
+  - action: action_familyfriends
+- story: path1_fine1/5convo2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: fine
+  - action: fine_reason_form
+  - active_loop: fine_reason_form
+  - active_loop: null
+  - action: action_fine_reason
+  - intent: affirm
+  - action: whats_going_on_form
+  - active_loop: whats_going_on_form
+  - active_loop: null
+  - action: action_whats_going_on
+  - intent: affirm
+  - action: utter_what_feeling
+  - intent: don't know
+  - action: feeling_form
+  - active_loop: feeling_form
+  - active_loop: null
+  - action: action_feeling
+  - action: feel_reason_form
+  - active_loop: feel_reason_form
+  - active_loop: null
+  - action: action_feel_reason
+  - intent: affirm
+  - action: utter_somethingelse
+  - action: utter_conversation
+  - intent: sports
+  - action: sports_form
+  - active_loop: sports_form
+  - active_loop: null
+  - action: action_sports
+- story: path1_fine1/5convo3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: fine
+  - action: fine_reason_form
+  - active_loop: fine_reason_form
+  - active_loop: null
+  - action: action_fine_reason
+  - intent: affirm
+  - action: whats_going_on_form
+  - active_loop: whats_going_on_form
+  - active_loop: null
+  - action: action_whats_going_on
+  - intent: affirm
+  - action: utter_what_feeling
+  - intent: don't know
+  - action: feeling_form
+  - active_loop: feeling_form
+  - active_loop: null
+  - action: action_feeling
+  - action: feel_reason_form
+  - active_loop: feel_reason_form
+  - active_loop: null
+  - action: action_feel_reason
+  - intent: affirm
+  - action: utter_somethingelse
+  - action: utter_conversation
+  - intent: food
+  - action: food_form
+  - active_loop: food_form
+  - active_loop: null
+  - action: action_food
+- story: path1_fine1/5convo4
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: fine
+  - action: fine_reason_form
+  - active_loop: fine_reason_form
+  - active_loop: null
+  - action: action_fine_reason
+  - intent: affirm
+  - action: whats_going_on_form
+  - active_loop: whats_going_on_form
+  - active_loop: null
+  - action: action_whats_going_on
+  - intent: affirm
+  - action: utter_what_feeling
+  - intent: don't know
+  - action: feeling_form
+  - active_loop: feeling_form
+  - active_loop: null
+  - action: action_feeling
+  - action: feel_reason_form
+  - active_loop: feel_reason_form
+  - active_loop: null
+  - action: action_feel_reason
+  - intent: affirm
+  - action: utter_somethingelse
+  - action: utter_conversation
+  - intent: music
+  - action: music_form
+  - active_loop: music_form
+  - active_loop: null
+  - action: action_music
+- story: path1_fine1/6
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: fine
+  - action: fine_reason_form
+  - active_loop: fine_reason_form
+  - active_loop: null
+  - action: action_fine_reason
+  - intent: affirm
+  - action: whats_going_on_form
+  - active_loop: whats_going_on_form
+  - active_loop: null
+  - action: action_whats_going_on
+  - intent: affirm
+  - action: utter_what_feeling
+  - intent: don't know
+  - action: feeling_form
+  - active_loop: feeling_form
+  - active_loop: null
+  - action: action_feeling
+  - action: feel_reason_form
+  - active_loop: feel_reason_form
+  - active_loop: null
+  - action: action_feel_reason
+  - intent: deny
+  - action: utter_amazingperson
+  - action: utter_talk_to_mia
+- story: path1_fine1/2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: fine
+  - action: fine_reason_form
+  - active_loop: fine_reason_form
+  - active_loop: null
+  - action: action_fine_reason
+  - intent: affirm
+  - action: whats_going_on_form
+  - active_loop: whats_going_on_form
+  - active_loop: null
+  - action: action_whats_going_on
+  - intent: deny
+  - action: utter_why_not
+  - intent: I don't
+  - action: utter_tell_me
+  - intent: affirm
+  - action: utter_what_feeling
+  - intent: affirm
+  - action: utter_what_feeling
+  - intent: sad
+  - action: utter_chat_simon
+- story: path1_fine1/2/1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: fine
+  - action: fine_reason_form
+  - active_loop: fine_reason_form
+  - active_loop: null
+  - action: action_fine_reason
+  - intent: affirm
+  - action: whats_going_on_form
+  - active_loop: whats_going_on_form
+  - active_loop: null
+  - action: action_whats_going_on
+  - intent: deny
+  - action: utter_why_not
+  - intent: I don't
+  - action: utter_tell_me
+  - intent: affirm
+  - action: utter_what_feeling
+  - intent: affirm
+  - action: utter_what_feeling
+  - intent: nervous
+  - action: utter_chat_ana
+- story: path1_fine1/2/2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: fine
+  - action: fine_reason_form
+  - active_loop: fine_reason_form
+  - active_loop: null
+  - action: action_fine_reason
+  - intent: affirm
+  - action: whats_going_on_form
+  - active_loop: whats_going_on_form
+  - active_loop: null
+  - action: action_whats_going_on
+  - intent: deny
+  - action: utter_why_not
+  - intent: I don't
+  - action: utter_tell_me
+  - intent: affirm
+  - action: utter_what_feeling
+  - intent: affirm
+  - action: utter_what_feeling
+  - intent: don't know
+  - action: feeling_form
+  - active_loop: feeling_form
+  - active_loop: null
+  - action: action_feeling
+  - action: feel_reason_form
+  - active_loop: feel_reason_form
+  - active_loop: null
+  - action: action_feel_reason
+  - intent: affirm
+  - action: utter_somethingelse
+  - action: utter_conversation
+  - intent: movies
+  - action: movie_form
+  - active_loop: movie_form
+  - active_loop: null
+  - action: action_movie
+- story: path1_fine1/2/2convo1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: fine
+  - action: fine_reason_form
+  - active_loop: fine_reason_form
+  - active_loop: null
+  - action: action_fine_reason
+  - intent: affirm
+  - action: whats_going_on_form
+  - active_loop: whats_going_on_form
+  - active_loop: null
+  - action: action_whats_going_on
+  - intent: deny
+  - action: utter_why_not
+  - intent: I don't
+  - action: utter_tell_me
+  - intent: affirm
+  - action: utter_what_feeling
+  - intent: affirm
+  - action: utter_what_feeling
+  - intent: don't know
+  - action: feeling_form
+  - active_loop: feeling_form
+  - active_loop: null
+  - action: action_feeling
+  - action: feel_reason_form
+  - active_loop: feel_reason_form
+  - active_loop: null
+  - action: action_feel_reason
+  - intent: affirm
+  - action: utter_somethingelse
+  - action: utter_conversation
+  - intent: family or friends
+  - action: familyorfriends_form
+  - active_loop: familyorfriends_form
+  - active_loop: null
+  - action: action_familyfriends
+- story: path1_fine1/2/2convo2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: fine
+  - action: fine_reason_form
+  - active_loop: fine_reason_form
+  - active_loop: null
+  - action: action_fine_reason
+  - intent: affirm
+  - action: whats_going_on_form
+  - active_loop: whats_going_on_form
+  - active_loop: null
+  - action: action_whats_going_on
+  - intent: deny
+  - action: utter_why_not
+  - intent: I don't
+  - action: utter_tell_me
+  - intent: affirm
+  - action: utter_what_feeling
+  - intent: affirm
+  - action: utter_what_feeling
+  - intent: don't know
+  - action: feeling_form
+  - active_loop: feeling_form
+  - active_loop: null
+  - action: action_feeling
+  - action: feel_reason_form
+  - active_loop: feel_reason_form
+  - active_loop: null
+  - action: action_feel_reason
+  - intent: affirm
+  - action: utter_somethingelse
+  - action: utter_conversation
+  - intent: sports
+  - action: sports_form
+  - active_loop: sports_form
+  - active_loop: null
+  - action: action_sports
+- story: path1_fine1/2/2convo3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: fine
+  - action: fine_reason_form
+  - active_loop: fine_reason_form
+  - active_loop: null
+  - action: action_fine_reason
+  - intent: affirm
+  - action: whats_going_on_form
+  - active_loop: whats_going_on_form
+  - active_loop: null
+  - action: action_whats_going_on
+  - intent: deny
+  - action: utter_why_not
+  - intent: I don't
+  - action: utter_tell_me
+  - intent: affirm
+  - action: utter_what_feeling
+  - intent: affirm
+  - action: utter_what_feeling
+  - intent: don't know
+  - action: feeling_form
+  - active_loop: feeling_form
+  - active_loop: null
+  - action: action_feeling
+  - action: feel_reason_form
+  - active_loop: feel_reason_form
+  - active_loop: null
+  - action: action_feel_reason
+  - intent: affirm
+  - action: utter_somethingelse
+  - action: utter_conversation
+  - intent: food
+  - action: food_form
+  - active_loop: food_form
+  - active_loop: null
+  - action: action_food
+- story: path1_fine1/2/2convo4
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: fine
+  - action: fine_reason_form
+  - active_loop: fine_reason_form
+  - active_loop: null
+  - action: action_fine_reason
+  - intent: affirm
+  - action: whats_going_on_form
+  - active_loop: whats_going_on_form
+  - active_loop: null
+  - action: action_whats_going_on
+  - intent: deny
+  - action: utter_why_not
+  - intent: I don't
+  - action: utter_tell_me
+  - intent: affirm
+  - action: utter_what_feeling
+  - intent: affirm
+  - action: utter_what_feeling
+  - intent: don't know
+  - action: feeling_form
+  - active_loop: feeling_form
+  - active_loop: null
+  - action: action_feeling
+  - action: feel_reason_form
+  - active_loop: feel_reason_form
+  - active_loop: null
+  - action: action_feel_reason
+  - intent: affirm
+  - action: utter_somethingelse
+  - action: utter_conversation
+  - intent: music
+  - action: music_form
+  - active_loop: music_form
+  - active_loop: null
+  - action: action_music
+- story: path1_fine1/2/3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: fine
+  - action: fine_reason_form
+  - active_loop: fine_reason_form
+  - active_loop: null
+  - action: action_fine_reason
+  - intent: affirm
+  - action: whats_going_on_form
+  - active_loop: whats_going_on_form
+  - active_loop: null
+  - action: action_whats_going_on
+  - intent: deny
+  - action: utter_why_not
+  - intent: I don't
+  - action: utter_tell_me
+  - intent: affirm
+  - action: utter_what_feeling
+  - intent: affirm
+  - action: utter_what_feeling
+  - intent: don't know
+  - action: feeling_form
+  - active_loop: feeling_form
+  - active_loop: null
+  - action: action_feeling
+  - action: feel_reason_form
+  - active_loop: feel_reason_form
+  - active_loop: null
+  - action: action_feel_reason
+  - intent: deny
+  - action: utter_amazingperson
+  - action: utter_talk_to_mia
+- story: path1_fine1/3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: fine
+  - action: fine_reason_form
+  - active_loop: fine_reason_form
+  - active_loop: null
+  - action: action_fine_reason
+  - intent: affirm
+  - action: whats_going_on_form
+  - active_loop: whats_going_on_form
+  - active_loop: null
+  - action: action_whats_going_on
+  - intent: deny
+  - action: utter_why_not
+  - intent: I don't
+  - action: utter_tell_me
+  - intent: deny
+  - action: utter_why_not
+  - intent: I don't
+  - action: utter_tell_me
+- story: path1_fine2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: fine
+  - action: fine_reason_form
+  - active_loop: fine_reason_form
+  - active_loop: null
+  - action: action_fine_reason
+  - intent: deny
+  - action: utter_okay
+  - action: utter_conversation
+  - intent: movies
+  - action: movie_form
+  - active_loop: movie_form
+  - active_loop: null
+  - action: action_movie
+- story: path1_fine2convo1
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: fine
+  - action: fine_reason_form
+  - active_loop: fine_reason_form
+  - active_loop: null
+  - action: action_fine_reason
+  - intent: deny
+  - action: utter_okay
+  - action: utter_conversation
+  - intent: family or friends
+  - action: familyorfriends_form
+  - active_loop: familyorfriends_form
+  - active_loop: null
+  - action: action_familyfriends
+- story: path1_fine2convo2
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: fine
+  - action: fine_reason_form
+  - active_loop: fine_reason_form
+  - active_loop: null
+  - action: action_fine_reason
+  - intent: deny
+  - action: utter_okay
+  - action: utter_conversation
+  - intent: sports
+  - action: sports_form
+  - active_loop: sports_form
+  - active_loop: null
+  - action: action_sports
+- story: path1_fine2convo3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: fine
+  - action: fine_reason_form
+  - active_loop: fine_reason_form
+  - active_loop: null
+  - action: action_fine_reason
+  - intent: deny
+  - action: utter_okay
+  - action: utter_conversation
+  - intent: food
+  - action: food_form
+  - active_loop: food_form
+  - active_loop: null
+  - action: action_food
+- story: path1_fine2convo4
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: fine
+  - action: fine_reason_form
+  - active_loop: fine_reason_form
+  - active_loop: null
+  - action: action_fine_reason
+  - intent: deny
+  - action: utter_okay
+  - action: utter_conversation
+  - intent: music
+  - action: music_form
+  - active_loop: music_form
+  - active_loop: null
+  - action: action_music
+- story: path1_fine3
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: fine
+  - action: fine_reason_form
+  - active_loop: fine_reason_form
+  - active_loop: null
+  - action: action_fine_reason
+- story: Story from Conversation ID 5488f083097c4330b20d70e7c2ee1e33
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: going to
+  - action: utter_after_going_to
+  - intent: deny
+  - action: because_form
+  - active_loop: because_form
+  - slot_was_set:
+    - requested_slot: because
+  - slot_was_set:
+    - because: Because, I think I need more accomplishments
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_because
+  - intent: affirm
+  - action: utter_leaves_chat

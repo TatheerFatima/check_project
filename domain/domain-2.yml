@@ -1,0 +1,255 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- good:
+    use_entities: true
+- fine:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- says_anything:
+    use_entities: true
+- really_sad:
+    use_entities: true
+- i_talk:
+    use_entities: true
+- someone_talk:
+    use_entities: true
+- greet:
+    use_entities: true
+- bye:
+    use_entities: true
+- not_sure:
+    use_entities: true
+- i:
+    use_entities: true
+- its_ok:
+    use_entities: true
+- don't_wanna_talk:
+    use_entities: true
+- emoticon:
+    use_entities: true
+- not_great:
+    use_entities: true
+- someone:
+    use_entities: true
+entities:
+- someone
+slots:
+  fine_reason:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  fine_reason_2:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  whats_going_on:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  feel:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  different:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  going_to_do:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  what_happened:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  to_do_now:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  best_option:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  they_tell_you:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  feel_about_that:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  tell_story:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  someone:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  because:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+responses:
+  utter_ask_fine_reason:
+  - text: Why just fine?
+  utter_ask_fine_reason_2:
+  - text: Why so?
+  utter_talk_about_it:
+  - text: Okay, Do you want to talk about this?
+  - text: Okay, Would you like to talk about this?
+  utter_talk_to_me:
+  - text: Okay, that's fine. Do you want to talk to me about it?
+  utter_ask_whats_going_on:
+  - text: whats going on?
+  - text: How's it going?
+  utter_ask_feel:
+  - text: How did that make you feel?
+  - text: How do you feel about that?
+  utter_ask_feel_about_that:
+  - text: How do you feel about that?
+  utter_talk_something_else:
+  - text: Okay lets talk about something else
+  - text: Okay leave it. Lets discuss something else
+  utter_conversational_chat:
+  - text: Leaves to conversational chat
+  utter_why_happened:
+  - text: Okay do you know why this happanend?
+  utter_ask_different:
+  - text: Do you think things could have happanend differently?
+  utter_ask_going_to_do:
+  - text: I am sorry, you feel that way. Something similiar happanend to me. The best thing we can do is learn from it and move on with our lives. What are you going to do now?
+  utter_ask_tell_story:
+  - text: I am sorry, you feel that way. Something similiar happanend to me. The best thing we can do is learn from it and move on with our lives. What are you going to do now?
+  utter_whats_next:
+  - text: What are you going to do next?
+  utter_sadness_temporary:
+  - text: Just remember that sadness is temporary.
+  utter_ask_what_happened:
+  - text: I get that sometimes I dont know either. That's okay, Tell me a little more about what happened exactly.
+  utter_ask_to_do_now:
+  - text: Okay, that makes sense. I am sorry that happened to you. What are you going to do now?
+  utter_ask_best_option:
+  - text: Will that make you feel better? Are you sure that's the best option?
+  utter_really_sad_why:
+  - text: Why? What happened?
+  utter_talk_with_someone:
+  - text: Have you talked to anyone else about it?
+  utter_ask_they_tell_you:
+  - text: Okay what did they tell you?
+  utter_tells_story:
+  - text: tells story
+  utter_story_mean:
+  - text: Do you see what I mean?
+  utter_why_not:
+  - text: Why not?
+  utter_why_i_sad:
+  - text: Why did that cause you to be sad?
+  utter_ask_because:
+  - text: Why did that cause you to be sad?
+  utter_want_a_joke:
+  - text: Okay, that's fine - want to hear a joke?
+  utter_tells_joke:
+  - text: tells a random joke
+  utter_something_else:
+  - text: okay, is there something else you want to tell me?
+  utter_greet:
+  - text: Hi, How are you doing?
+  utter_bye:
+  - text: Bye.
+actions:
+- action_fine_reason
+- action_fine_reason_2
+- action_whats_going_on
+- action_feel
+- action_different
+- action_going_to_do
+- action_what_happened
+- action_to_do_now
+- action_best_option
+- action_they_tell_you
+- action_feel_about_that
+- action_tell_story
+- action_someone
+- action_because
+forms:
+  fine_reason_form:
+    required_slots:
+      fine_reason:
+      - type: from_text
+  fine_reason_2_form:
+    required_slots:
+      fine_reason_2:
+      - type: from_text
+  whats_going_on_form:
+    required_slots:
+      whats_going_on:
+      - type: from_text
+  feel_form:
+    required_slots:
+      feel:
+      - type: from_text
+  different_form:
+    required_slots:
+      different:
+      - type: from_text
+  going_to_do_form:
+    required_slots:
+      going_to_do:
+      - type: from_text
+  what_happened_form:
+    required_slots:
+      what_happened:
+      - type: from_text
+  to_do_now_form:
+    required_slots:
+      to_do_now:
+      - type: from_text
+  best_option_form:
+    required_slots:
+      best_option:
+      - type: from_text
+  they_tell_you_form:
+    required_slots:
+      they_tell_you:
+      - type: from_text
+  feel_about_that_form:
+    required_slots:
+      feel_about_that:
+      - type: from_text
+  tell_story_form:
+    required_slots:
+      tell_story:
+      - type: from_text
+  someone_form:
+    required_slots:
+      someone:
+      - entity: someone
+        type: from_entity
+  because_form:
+    required_slots:
+      because:
+      - type: from_text
+e2e_actions: []

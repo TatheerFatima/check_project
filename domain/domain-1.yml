@@ -1,0 +1,370 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- fine:
+    use_entities: true
+- I don't:
+    use_entities: true
+- sad:
+    use_entities: true
+- nervous:
+    use_entities: true
+- don't know:
+    use_entities: true
+- good:
+    use_entities: true
+- great:
+    use_entities: true
+- happy:
+    use_entities: true
+- did:
+    use_entities: true
+- going to:
+    use_entities: true
+- accomplished:
+    use_entities: true
+- positive:
+    use_entities:
+    - positive_word
+- celebration:
+    use_entities:
+    - celebration
+- not sure:
+    use_entities: true
+- ok:
+    use_entities: true
+- I know:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
+- I hope:
+    use_entities: true
+- plan:
+    use_entities:
+    - plan
+- movies:
+    use_entities: true
+- family or friends:
+    use_entities: true
+- sports:
+    use_entities: true
+- food:
+    use_entities: true
+- music:
+    use_entities: true
+- i_am:
+    use_entities: true
+entities:
+- positive_word
+- celebration
+- plan
+slots:
+  fine_reason:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  whats_going_on:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  feeling:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  feel_reason:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  positive_word:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  celebration:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  fun:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  time_proud:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  because:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  plan:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  movie:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  family_friends:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  sports:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  food:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  music:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  requested_slot:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+responses:
+  utter_what_feeling:
+  - text: Okay, What are you feeling?
+  utter_mood_good:
+  - text: Good! I'm glad you're doing well. What is good right now?
+  utter_mood_great:
+  - text: This is awesome! What is going great?
+  utter_mood_happy:
+  - text: That's awesome! Why are you happy?
+  utter_after_did:
+  - text: That's amazing! How are you going to celebrate?
+  utter_after_going_to:
+  - text: Wow! That's great! Are you excited?
+  utter_after_accomplished:
+  - text: Wow! That's great! Are you proud?
+  utter_faith_2:
+  - text: Have faith in yourself!
+  utter_story:
+  - text: Do you want to read a story?
+  utter_leaves_chat:
+  - text: Leaves Chat
+  utter_ask_because:
+  - text: Why not?
+  utter_after_positive:
+  - text: Yes, You are! Do you like being {positive_word} ?
+  utter_after_celebration:
+  - text: 'You said: {celebration}'
+  utter_way_celebrate:
+  - text: That's an awesome way to celebrate
+  utter_have_confidence:
+  - text: you should be! Have confidence
+  utter_Iam_proud:
+  - text: I am really proud of you!
+  utter_plans_next:
+  - text: What are your plans next?
+  utter_ask_plan:
+  - text: What are your plans next?
+  utter_be_excited:
+  - text: Be excited! You accomplished something great!
+  utter_donot_worry:
+  - text: Don't worry, youi will. Have faith in yourself.
+  utter_time_celebrate:
+  - text: Time to celebrate!
+  utter_no_worries:
+  - text: No worries! Live in the moment.
+  utter_sounds_plan:
+  - text: Sounds like a plan! Remember to appreciate this moment too.
+  utter_if_wantsto_chat:
+  - text: Want to keep chatting?
+  utter_something_new:
+  - text: Okay, tell me something new
+  utter_end_chat:
+  - text: Chat ended
+  utter_ask_fun:
+  - text: You should do something fun!
+  utter_ask_time_proud:
+  - text: That's great! When was the last time you were excited/proud?
+  utter_conversation:
+  - buttons:
+    - payload: /movies
+      title: Movies
+    - payload: /family or friends
+      title: Family or Friends
+    - payload: /sports
+      title: Sports
+    - payload: /food
+      title: Food
+    - payload: /music
+      title: Music
+    text: What you want to talk about?
+  utter_ask_movie:
+  - text: Alright, what is your favourite movie?
+  utter_ask_familyorfriends:
+  - text: Alright, How many members are in your family?
+  utter_ask_sports:
+  - text: Alright, what is your favourite sports?
+  utter_ask_food:
+  - text: Alright, what is your favourite food?
+  utter_ask_music:
+  - text: Alright, what is your favourite music artist?
+  utter_after_movie:
+  - text: That's great, I like {movie} too!
+  utter_after_familyorfriends:
+  - text: That's great, I hope you have a happy family.
+  utter_after_sports:
+  - text: That's great, I like playing {sports} too!
+  utter_after_food:
+  - text: That's great, I like eating {food} too!
+  utter_after_music:
+  - text: That's great, I like listening to {music} too!
+  utter_somethingelse:
+  - text: Let's talk about something else!
+  utter_amazingperson:
+  - text: You are an amazing person!
+  utter_talk_to_mia:
+  - text: I have a friend Mia who felt the same way. Click here to talk with her.
+  utter_why_not:
+  - text: Why not?
+  utter_tell_me:
+  - text: Do you want to tell me?
+  utter_chat_simon:
+  - text: Okay, Let's chat Simon
+  utter_chat_ana:
+  - text: Okay, Let's chat Ana
+  utter_have_you_talked:
+  - text: Okay, Have you talked to anyone about it?
+  utter_ask_feel_reason:
+  - text: What made you feel that way?
+  utter_you_entered_goingon:
+  - text: 'Whats going on: {whats_going_on}'
+  utter_you_entered_feelreason:
+  - text: 'Feel reason: {feel_reason}'
+  utter_faith:
+  - text: Remember to have faith in yourself and believe in your self.
+  utter_you_entered_feeling:
+  - text: 'Feeling: {feeling}'
+  utter_hi:
+  - text: Hi, How's it going?
+  utter_ask_fine_reason:
+  - text: Why just fine?
+  utter_ask_feeling:
+  - text: Okay, describe how you are feeling?
+  utter_fine_if_wants_to_talk:
+  - text: Okay, do you want to talk about it?
+  utter_okay:
+  - text: Okay.
+  utter_ask_whats_going_on:
+  - text: What's going on?
+  utter_you_entered:
+  - text: 'fine reason: {fine_reason}'
+  utter_greet:
+  - text: Hey! How are you?
+  utter_goodbye:
+  - text: Bye
+  utter_ask_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you please rephrase?
+actions:
+- action_fine_reason
+- action_whats_going_on
+- action_feeling
+- action_feel_reason
+- action_submit_positive
+- action_submit_celebration
+- action_fun
+- action_proud
+- action_because
+- action_plan
+- action_movie
+- action_familyfriends
+- action_sports
+- action_food
+- action_music
+forms:
+  fine_reason_form:
+    required_slots:
+      fine_reason:
+      - type: from_text
+  whats_going_on_form:
+    required_slots:
+      whats_going_on:
+      - type: from_text
+  feeling_form:
+    required_slots:
+      feeling:
+      - type: from_text
+  feel_reason_form:
+    required_slots:
+      feel_reason:
+      - type: from_text
+  positive_form:
+    required_slots:
+      positive_word:
+      - entity: positive_word
+        type: from_entity
+  celebration_form:
+    required_slots:
+      celebration:
+      - entity: celebration
+        type: from_entity
+  fun_form:
+    required_slots:
+      fun:
+      - type: from_text
+  proud_form:
+    required_slots:
+      time_proud:
+      - type: from_text
+  because_form:
+    required_slots:
+      because:
+      - type: from_text
+  plan_form:
+    required_slots:
+      plan:
+      - entity: plan
+        type: from_entity
+  movie_form:
+    required_slots:
+      movie:
+      - type: from_text
+  familyorfriends_form:
+    required_slots:
+      family_friends:
+      - type: from_text
+  sports_form:
+    required_slots:
+      sports:
+      - type: from_text
+  food_form:
+    required_slots:
+      food:
+      - type: from_text
+  music_form:
+    required_slots:
+      music:
+      - type: from_text
+e2e_actions: []
